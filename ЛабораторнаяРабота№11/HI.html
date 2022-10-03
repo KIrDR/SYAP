@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="jquery/jquery.js"></script> <!-- $(селектор).метод(); --> 
+    <style>     
+    body {
+    background: url("Хороший\ фон\ для\ сайтов.png");
+    }
+        input {
+        margin-top: 50px;
+        margin-bottom: 25px;
+        
+        }
+        
+        div{ 
+            margin-top:20px ; 
+            font-size:24px; 
+            text-align: center;
+        }
+    
+        p {
+        height: 135px;
+        background: rgba(255, 255, 255, .3);
+        border-color: black;
+        border-style: solid;
+        border-width: 1px;
+        width: 22%;
+        border-radius: 7px;
+        font-size: 16px;
+        font-family: helvetica, serif;
+        text-decoration: none;
+        vertical-align: middle;
+        margin: 50px auto auto;
+        }</style>
+</head>
+<body>
+
+    <div> Задание 1</div>
+    
+    <p id="mama" >
+        Мне хочется очень спасибо сказать,<br/>
+        За то, что мамуля мне жизнь подарила.<br/>
+        За то, что смогла ты меня воспитать.<br/>
+        За то, что всему ты меня научила.
+        </p>    
+
+
+        <div> Задание 2</div>
+
+
+        <p id="size">
+        Любимая мамочка, дольше живи.<br/>
+        Здоровья тебе, светлых дней безмятежных.<br/>
+        
+        </p>
+
+
+        <div> Задание 3</div>
+        
+        
+        <p style="width:333px">
+        v
+        </p>
+
+
+        <div> Задание 4</div>
+
+
+        <p id="changeText" >
+            Кто открыл мне этот мир, <br/>
+            Не жалея своих сил?<br/>
+            И всегда оберегала?<br/>
+            Лучшая на свете МАМА.
+        </p>
+
+
+        <div> Задание 5</div>
+
+
+        <p>
+        <img id="conteiner" style="width: 200px;" src="picture2.png"">
+        </p>
+
+
+        <div> Задание 6</div>
+
+
+        <p style=" border: 0px" id="zall">
+            Папа крепко держит зонт,<br/>
+            Под зонтом мне сухо,<br/>
+            Но не вижу горизонт —<br/>
+            Вижу папы ухо.
+        </p>
+
+        <script>
+
+
+
+            $("#mama").mouseover(function(){$("#mama").css("color","green")});          
+            $("#mama").mouseout(function(){$("#mama").css("color","black")});
+    
+            $("#size").click(function(){$("#size").css("fontSize","25px")});
+         
+    
+            $("#changeImg").click(function(){$("#changeImg").attr("src","picture2.png")});
+    
+            $("#changeText").click(function(){$("#changeText").html("\<img id=\"changeImg\" src=\"picture1.png\">")});
+    
+            $("#conteiner").click(function(){$( "#conteiner").css("width","333px")});
+    
+            $("#conteiner").click(function(){$("#conteiner").css("width","333px")});
+    
+            $("#zall").dblclick(function(){$("#zall").css("border","3px solid black")});
+    
+        </script>   
+</body>
+</html>

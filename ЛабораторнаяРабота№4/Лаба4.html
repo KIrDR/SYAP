@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laba04</title>
+    <style> 
+        .button {
+            display: inline-block;
+            width: 340px;
+            height: 55px;
+            border-radius: 45px;
+            margin: 10px 20px;
+            text-align: center;
+            letter-spacing: 1px;
+            font-weight: 600;
+            background: white;
+            box-shadow: 0 8px 15px rgb(120, 0, 0);
+        }
+        
+        
+        div { text-align: center;}
+        table,td {
+            border: 1px solid #777;
+            padding: 5px 10px;
+            margin: 10px;
+            text-align: center;
+        }
+        td {
+            width: 15px;
+        }
+        </style> 
+</head>
+<script>
+    function task_1(){ 
+                                                                                                                     //Конструктор для создания объекта Gruppa со свойствами n, spec, kolich и методом add_stud 
+function Gruppa(n,spec,kolich) {
+                                                                                                                                                                                                                                             //Свойства(номер, специальность, количество)
+this.n=n;
+this.spec=spec;
+this.kolich=kolich;
+                                                                                                                                                            //Метод (добавить в группу k студентов)
+this.add_stud=function add_stud(k) {
+this.kolich+=k;
+document.getElementById("zadanie_1").innerHTML=('В группу  ' + this.n + '  добавили '+ k + '  студентов.<br\>'); }
+    this.sub_stud=function sub_stud(m){ 
+     this.kolich-=m
+     document.getElementById("zadanie_1").innerHTML+=('Из группы  ' + this.n + '  отчислили '+ m + '  студентов.<br\>'); }
+
+ }
+
+gr1=new Gruppa(2, ' ИСиТ ', 28);
+gr1.add_stud(2);
+Gruppa.prototype.kurs=this.kurs ;
+gr1.kurs= 2 ;
+gr2 = new Gruppa (1," ИСиТ ", 30); 
+gr2.sub_stud(3);
+gr2.kurs=2 ; 
+gr3 = new Gruppa (8," ПОИМБС ", 30); 
+gr3.kurs=2 ; 
+gr4 = new Gruppa (4," ПОИТ ", 30); 
+gr4.sub_stud(29);
+gr4.kurs=2 ; 
+document.getElementById("zadanie_1").innerHTML+=(gr1.n,gr1.spec, gr1.kolich+ ' курс '+  gr1.kurs+ "<br>"); 
+document.getElementById("zadanie_1").innerHTML+=(gr2.n,gr2.spec, gr2.kolich+ ' курс '+  gr2.kurs+ "<br>") ; 
+document.getElementById("zadanie_1").innerHTML+=(gr3.n,gr3.spec, gr3.kolich+ ' курс '+  gr3.kurs+ "<br>"); 
+document.getElementById("zadanie_1").innerHTML+=(gr4.n,gr4.spec, gr4.kolich+ ' курс '+  gr4.kurs) ; 
+    }
+
+    function task_2(){
+    function Student(name,firstName,fiz,math_,info) { 
+        this.name=name ; 
+        this.firstName = firstName ; 
+        this.fiz = fiz ; 
+        this.math_ = math_ ; 
+        this.info = info ; }
+        Dima = new Student('Дмитрий ', ' Потапов ', 7, 9, 10 );
+        Pavel = new Student('Павел ', ' Коваленок ', 7, 5, 8 );
+        Anton = new Student('Антон ', ' Сабуров ', 8, 8, 8 );
+        Alina = new Student( 'Алнина  ', ' Курц ', 10, 9, 10 ); 
+        Student.prototype.srbl=this.srbl ;
+        Dima.srbl= ((Dima.fiz+Dima.math_+Dima.info)/3) ; 
+        Pavel.srbl= ((Pavel.fiz+Pavel.math_+Pavel.info)/3) ; 
+        Anton.srbl= ((Anton.fiz+Anton.math_+Anton.info)/3) ; 
+        Alina.srbl= ((Alina.fiz+Alina.math_+Alina.info)/3) ; 
+        alert(Dima.name  + Dima.firstName); 
+        Student.prototype.povedenie=this.povedenie ;
+        Dima.povedenie= "удвл.";
+        Pavel.povedenie= "прим.";
+        Anton.povedenie= "удвл.";
+        Alina.povedenie= "ужас.";
+
+        document.getElementById("zadanie_2").innerHTML=(Dima.name+ Dima.firstName+ "<br> Средний балл: "+ Dima.srbl.toPrecision(2)+ "  поведение: " +Dima.povedenie+"<br>" ); 
+        document.getElementById("zadanie_2").innerHTML+=(Pavel.name+ Pavel.firstName+ "<br> Средний балл: "+ Pavel.srbl.toPrecision(2) +"  поведение: " + Pavel.povedenie+ "<br>" ); 
+        document.getElementById("zadanie_2").innerHTML+=(Anton.name+ Anton.firstName+ "<br> Средний балл: "+ Anton.srbl.toPrecision(2) +"  поведение: " + Anton.povedenie+ "<br>" ); 
+        document.getElementById("zadanie_2").innerHTML+=(Alina.name+ Alina.firstName+ "<br> Средний балл: "+ Alina.srbl.toPrecision(2) + "  поведение: " +Alina.povedenie+ "<br>" ); 
+
+    
+    
+    } 
+     
+    function task_3() { 
+        function Gruppa(n,spec,kolich) {
+                                                                                                                                                                                                                                             //Свойства(номер, специальность, количество)
+this.n=n;
+this.spec=spec;
+this.kolich=kolich;
+                                                                                                                                                            //Метод (добавить в группу k студентов)
+this.add_stud=function add_stud(k) {
+this.kolich+=k;
+ }
+    this.sub_stud=function sub_stud(m){ 
+     this.kolich-=m;
+      }
+
+ }
+
+gr1=new Gruppa(2, ' ИСиТ ', 28);
+gr1.add_stud(2);
+Gruppa.prototype.kurs=this.kurs ;
+gr1.kurs= 2 ;
+gr2 = new Gruppa (1," ИСиТ ", 30); 
+gr2.sub_stud(3);
+gr2.kurs=2 ; 
+gr3 = new Gruppa (8," ПОИМБС ", 30); 
+gr3.kurs=2 ; 
+gr4 = new Gruppa (4," ПОИТ ", 30); 
+gr4.sub_stud(29);
+gr4.kurs=2 ; 
+
+function Student(name,firstName,fiz,math_,info) { 
+        this.name=name ; 
+        this.firstName = firstName ; 
+        this.fiz = fiz ; 
+        this.math_ = math_ ; 
+        this.info = info ; }
+        Dima = new Student('Дмитрий ', ' Потапов ', 7, 9, 10 );
+        Pavel = new Student('Павел ', ' Коваленок ', 7, 5, 8 );
+        Anton = new Student('Антон ', ' Сабуров ', 8, 8, 8 );
+        Alina = new Student( 'Алнина  ', ' Курц ', 10, 9, 10 ); 
+        Student.prototype.srbl=this.srbl ;
+        Dima.srbl= ((Dima.fiz+Dima.math_+Dima.info)/3) ; 
+        Pavel.srbl= ((Pavel.fiz+Pavel.math_+Pavel.info)/3) ; 
+        Anton.srbl= ((Anton.fiz+Anton.math_+Anton.info)/3) ; 
+        Alina.srbl= ((Alina.fiz+Alina.math_+Alina.info)/3) ; 
+        Student.prototype.povedenie=this.povedenie ;
+        Dima.povedenie= "удвл.";
+        Pavel.povedenie= "прим.";
+        Anton.povedenie= "удвл.";
+        Alina.povedenie= "ужас.";
+
+
+      let mas = new Array ('0','1','2','3','4','5','6','7','8','9' ); 
+      document.getElementById("zadanie_3").innerHTML= mas  + "<br>  "; 
+      delete mas[2] ; 
+      document.getElementById("zadanie_3").innerHTML+= mas  + "<br>  " ; 
+      document.getElementById("zadanie_3").innerHTML+=(1 in mas) + "<br>";
+      
+      document.getElementById("zadanie_3").innerHTML+=("<br>firstName в Student: "+("firstName" in gr1)+ "<br>");
+      document.getElementById("zadanie_3").innerHTML+=("<br>srbl в Gruppa: "+("srbl" in gr3)+"<br>");
+
+      document.getElementById("zadanie_3").innerHTML+=("Является ли объект Gruppa объектом ?  " + (Gruppa instanceof Object) + "<br>");   
+      document.getElementById("zadanie_3").innerHTML+=("Является ли объект Gruppa строкой ?  " + (Gruppa instanceof Date)+ "<br>" ) ;
+      document.getElementById("zadanie_3").innerHTML+=("Является ли объект Gruppa датой ?  " + (Gruppa instanceof String) + "<br>" ) ;
+      document.getElementById("zadanie_3").innerHTML+=("<br>"); 
+      document.getElementById("zadanie_3").innerHTML+=("Является ли объект mas массивом ?  " + (mas instanceof Array) + "<br>");   
+      document.getElementById("zadanie_3").innerHTML+=("Является ли объект mas строкой ?  " + (mas instanceof Date)+ "<br>" ) ;
+      document.getElementById("zadanie_3").innerHTML+=("Является ли объект mas датой ?  " + (mas instanceof String) + "<br>" ) ;
+      document.getElementById("zadanie_3").innerHTML+=("<br>"); 
+      document.getElementById("zadanie_3").innerHTML+=("Является ли объект Student массивом ?  " + (Student instanceof Array) + "<br>");   
+      document.getElementById("zadanie_3").innerHTML+=("Является ли объект Student строкой ?  " + (Student instanceof Date)+ "<br>" ) ;
+      document.getElementById("zadanie_3").innerHTML+=("Является ли объект Student датой ?  " + (Student instanceof String) + "<br>" ) ;
+      document.getElementById("zadanie_3").innerHTML+=("<br>"); 
+      
+      document.getElementById("zadanie_3").innerHTML+=(typeof gr1.kurs + "<br>");
+      document.getElementById("zadanie_3").innerHTML+=(typeof Dima + "<br>");
+      document.getElementById("zadanie_3").innerHTML+=(typeof Student + "<br>");
+      document.getElementById("zadanie_3").innerHTML+=(typeof LOLOLOL + "<br>");
+      document.getElementById("zadanie_3").innerHTML+=(typeof Pavel.srbl + "<br>");
+
+
+    }
+    
+
+</script>
+ <body background="Хороший фон для сайтов.png">
+
+    <p align='center'><input type='button' class='button'   value='Задание №1 ' onclick='task_1()' /> <br>
+        <div id="zadanie_1">  </div> 
+    <p align='center'><input type='button' class='button'   value='Задание №2 ' onclick='task_2()' /> <br>
+        <div id="zadanie_2">  </div> 
+    <p align='center'><input type='button' class='button'   value='Задание №3 ' onclick='task_3()' /> <br>
+        <div id="zadanie_3">  </div> 
+</body>
+</html>

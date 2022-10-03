@@ -1,0 +1,25 @@
+
+.button {
+    display: inline-block;
+    width: 340px;
+    height: 55px;
+    border-radius: 45px;
+    margin: 10px 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 600;
+    background: white;
+    box-shadow: 0 8px 15px rgb(120, 0, 0);
+}
+
+
+
+table,td {
+    border: 1px solid #777;
+    padding: 5px 10px;
+    margin: 10px;
+    text-align: center;
+}
+td {
+    width: 15px;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+</head>
+<body>
+<script> 
+
+
+
+function callForm(){ 
+    var form = document.forms.student ;
+    document.getElementById("mirror").innerHTML+=(" <h1 style=\"text-align:center\"> "+form.elements.faculty.value+ " </h1><br/> Студент " + form.elements.lastname.value + " специальности " +  form.elements.profession.value+ " курс " + form.elements.space.value + "должен сдавать следующие предметы:");
+                
+                for (let i = 0; i < form.elements.subject.length; i++) {
+                if (form.elements.subject[i].checked) {
+                document.getElementById("mirror").innerHTML+=("<li>" + form.elements.subject[i].value + "</li>");
+                }
+            }
+            document.getElementById("mirror").innerHTML+=("</ul>"); 
+        }
+
+        
+ function lest() {
+       var form = document.forms.student ;
+       document.write("<select>") ; 
+       // document.getElementById("subjectList").innerHTML=("<select>") ; 
+        for (let i = 0 ; i < 5; i++ ) { 
+         if (form.elements.subject[i].checked) {
+         document.write( "<option>" + form.elements.subject[i].value +" </option> ")               
+       //  document.getElementById("subjectList").innerHTML+=( "<option>" + form.elements.subject[i].value +" </option> ")               
+    }  
+         document.write("</select>") ; 
+       //  document.getElementById("subjectList").innerHTML=("</select>") ; 
+        }
+    
+    
+}
+
+</script>
+<form action="server" name="student">
+    <fieldset>
+        <legend> Привет !&#128126; </legend>
+        <p>Ваш факультет: </p>
+        <textarea cols="30" rows="4" style="resize: none;" name="faculty"></textarea>
+        <br />Имя: <br /><input type='text' name='firstname' /><br />
+    Фамилия:<br /> <input type='text' name='lastname' /><br />
+    
+    </fieldset>
+    <fieldset>
+    
+    <p>Курс</p> 
+    <input type='radio' name='space' value='1' />   1
+    <input type='radio' name='space' value='2' />   2
+    <input type='radio' name='space' value='3' />   3
+    <input type='radio' name='space' value='3' />   4
+     <br/><br/> 
+     
+     Ваша специальность: 
+
+    <br/><select name="profession">
+        <option>ПОИТ</option>
+        <option>ИСиТ</option>
+        <option>ПОИМБС</option>
+        <option>ДЭВИ</option>
+    </select><br>
+    <br>Предметы<br><input type="checkbox" name="subject" value="ОИТ"/>ОИТ
+    <input type="checkbox" name="subject" value="ОАП"/>ОАП
+    <input type="checkbox" name="subject" value="История"/>История
+    <input type="checkbox" name="subject" value="Физика"/>Физика
+    <input type="checkbox" name="subject" value="Математика"/>Математика
+
+<br><input type="submit" value="Submit">
+<input type="reset" value="Reset">
+
+    <input type="submit"/>
+    <fieldset>
+    </form>   
+    <input type='button' value='задание 1'  onclick='callForm()'/> 
+    <input type='button' value='задание 2'  onclick='lest()'/>
+     <div id="mirror"> </div>
+     <div id="subjectList"> </div>
+     
+</body>
+</html>

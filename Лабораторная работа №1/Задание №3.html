@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+<html lang="ru">
+
+<head>
+    <meta charset="utd-8">
+    <script type="text/javascript">
+        function Prime() { 
+            alert(' Задание №3');
+            x=Number(prompt('x =  '));
+            y=Number(prompt('y =  '));
+            V1 = (35*y - 25*x)/5 +235 ;
+            V2 = (8*y/x+5*x/y - 43) * 6 ;
+            alert('результат деления (35*y - 25*x)/5 +235 на (8*y/x+5*x/y - 43) * 6 -->');
+            let ostatoc = V1 % V2 ; 
+            alert (ostatoc );
+            document.write('x = ');
+            document.write(x +  '<br/>');
+            document.write('y = ')
+            document.write(y +  '<br/>');
+            document.write('V1 = ');
+            document.write(V1 +  '<br/>');
+            document.write('V2 = ');
+            document.write(V2 + '<br/> ');
+            document.write('Остаток = ');
+            document.write(ostatoc);
+        }
+
+
+
+          </script>
+</head>
+
+<body onload=Prime()>
+
+</body>
+</html>

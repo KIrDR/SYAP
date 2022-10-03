@@ -1,0 +1,25 @@
+
+<HTML>
+  <HEAD>
+      <title>lab11</title>
+          <style>
+              #mybody {
+                  background-color: rgb(111, 246, 240);
+                  font-family:arial;
+              }
+              #c1{
+              width:400px;
+              height:400px;
+              border: 3px solid rgb(16, 4, 184);
+              }
+          </style>
+  </HEAD>
+  <script type="text/javascript"  src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js">
+  </script>
+  <body>
+    <IMG ID="microsoft" src="picture1.png" onclick="init_microsoft()" style="position:absolute; top:330px; left:20px; width:150px; height:100px;" />
+<script>$( "#microsoft" ).click(function() {
+	$( "#microsoft" ).first().animate({left: 500},1000);
+  });</script>
+  </body> 
+  </HTML> 

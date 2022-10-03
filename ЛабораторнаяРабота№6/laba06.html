@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    "use script"
+    var hellow, papal ;
+  
+    function window_1() { 
+      papal = window.open("file:///C:/Users/Я/Desktop/ЛабораторныеРаботы/СЯП/ЛабораторнаяРабота№6/task1.html") ; 
+    }
+      function close(){
+      papal.window.close() ; 
+       }
+      function newWindow(){
+        hellow = window.open("about:blank ","", "height = 600, width = 600");
+         }
+       function massege(){
+         hellow.document.write(" Жизнь прекрасна  <br> ");
+       }
+   
+
+    function tablee(){
+      document.write("<table border=1>");
+      document.write("<th>свойство</th>");
+      document.write("<th>значение</th>");
+      document.write("<tr><td>1. всю информацию о браузере пользователя</td><td>"+navigator.userAgent+"</td></tr>");
+      document.write("<tr><td>2. версию браузера</td><td>"+navigator.appVersion+"</td></tr>");
+      document.write("<tr><td>3. назване браузера</td><td>"+navigator.appName+"</td></tr>");
+      document.write("<tr><td>4. кодовое название браузера</td><td>"+navigator.appCodeName+"</td></tr>");
+      document.write("<tr><td>5. ОС, которую использует пользователь</td><td>"+navigator.platform+"</td></tr>");
+      document.write("<tr><td>6. включена ли поддержка Java в браузере</td><td>"+navigator.javaEnabled()+"</td></tr>");
+      document.write("<tr><td>7. ширину и высоту экрана</td><td>ширина экрана: "+screen.width+", высота экрана: "+screen.height+"</td></tr>");
+      document.write("<tr><td>8. глубину цвета</td><td>"+screen.colorDepth+"</td></tr>");
+      document.write("<tr><td>9. URL, которые были посещены в данном окне браузера</td><td>"+history+"</td></tr>");
+      document.write("<tr><td>10. URL текущего документа</td><td>"+location.href+"</td></tr>");
+      document.write("<tr><td>11. путь к загруженному документу</td><td>"+location.pathname+"</td></tr>");
+      document.write("<tr><td>12. имя домена загруженного документа</td><td>"+location.host+"</td></tr>");
+  }
+    </script> 
+   <input type='button' class='button'   value='открыть новое окно ' onclick=' window_1()' />
+   <input type='button' class='button'   value='закрыть окно' onclick='close()' />
+   <input type='button' class='button'   value='окно' onclick='newWindow()' />
+   <input type='button' class='button'   value='Сообщение в другом окне  ' onclick='massege()' />
+   <input type='button' class='button'   value='ТАБЛИЦА СВЕДЕНИЙ О БРАУЗЕРЕ ' onclick='tablee()' />
+
+</body>
+</html>
